@@ -1,8 +1,10 @@
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProtectedRoutes = ({ loggedIn, children }) => {
+  const navigate = useNavigate();
+
   if (!loggedIn) {
-    return redirect("/user/login");
+    return navigate("/");
   }
 
   return children;
