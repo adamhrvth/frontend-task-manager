@@ -4,7 +4,8 @@ const FreeRoutes = ({ loggedIn, children }) => {
   const navigate = useNavigate();
 
   if (loggedIn) {
-    return navigate("/");
+    navigate("/");
+    return;
   }
 
   return children;
