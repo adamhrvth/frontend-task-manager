@@ -2,8 +2,6 @@ import { useContext, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import FreeRoutes from './components/FreeRoutes';
-import ProtectedRoutes from './components/ProtectedRoutes';
 
 import { UserContext } from './context/UserContext';
 
@@ -51,67 +49,39 @@ function App() {
         
         <Route 
           path = "/user/register" 
-          element = {
-            <FreeRoutes loggedIn = {user._id ? true : false}>
-              <Register />
-            </FreeRoutes>
-        } />
+          element = {user._id ? <Home /> : <Register />}
+        />
 
         <Route 
           path = "/user/login" 
-          element = {
-            <FreeRoutes loggedIn = {user._id ? true : false}>
-              <Login />
-            </FreeRoutes>
-        } />
+          element = {user._id ? <Home /> : <Login />}
+        />
 
         <Route 
           path = "/user/profile" 
-          element = {
-            <ProtectedRoutes loggedIn = {user._id ? true : false}>
-              <Profile />
-            </ProtectedRoutes>
-        } />
+          element = {user._id ? <Profile /> : <Login />} 
+        />
 
         <Route 
           path = "/user/changesettings" 
-          element = {
-            <ProtectedRoutes loggedIn = {user._id ? true : false}>
-              <ChangeSettings />
-            </ProtectedRoutes>
-        } />
+          element = {user._id ? < ChangeSettings /> : < Login />} 
+        />
 
         <Route 
           path = "/user/updatepassword" 
-          element = {
-            <ProtectedRoutes loggedIn = {user._id ? true : false}>
-              <UpdatePassword />
-            </ProtectedRoutes>
-        } />
+          element = {user._id ? <UpdatePassword /> : < Login />} />
 
         <Route 
           path = "/task/create" 
-          element = {
-            <ProtectedRoutes loggedIn = {user._id ? true : false}>
-              <CreateTask />
-            </ProtectedRoutes>
-        } />
+          element = {user._id ? <CreateTask /> : < Login />} />
 
         <Route 
           path = "/task/view/:id" 
-          element = {
-            <ProtectedRoutes loggedIn = {user._id ? true : false}>
-              <ViewTask />
-            </ProtectedRoutes>
-        } />
+          element = {user._id ? <ViewTask /> : < Login />} />
 
         <Route 
           path = "/task/update/:id" 
-          element = {
-            <ProtectedRoutes loggedIn = {user._id ? true : false}>
-              <UpdateTask />
-            </ProtectedRoutes>
-        } />
+          element = {user._id ? <UpdateTask /> : < Login />} />
       </Routes>
     </div>
   );
