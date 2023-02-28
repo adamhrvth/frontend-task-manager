@@ -1,10 +1,8 @@
-import { Navigate } from "react-router-dom";
+import { redirect  } from "react-router-dom";
 
 const FreeRoutes = ({ loggedIn, children }) => {
   if (loggedIn) {
-    return (
-      <Navigate to = "/" replace/>
-    );
+    return redirect("/");
   }
 
   return children;
