@@ -26,7 +26,13 @@ function App() {
 
   const fetchData = async () => {
     const res = await getUser();
-    setUser(res.data.user);
+    if (res.status === 200) {
+      setUser(res.data.user);
+    }
+    else {
+      setUser({});
+    }
+    
   };
 
   // get user on each refresh
