@@ -69,19 +69,28 @@ function App() {
 
         <Route 
           path = "/user/updatepassword" 
-          element = {user._id ? <UpdatePassword /> : < Login />} />
+          element = {user._id ? <UpdatePassword /> : < Login />} 
+        />
 
         <Route 
           path = "/task/create" 
-          element = {user._id ? <CreateTask /> : < Login />} />
+          element = {user._id ? <CreateTask /> : < Login />} 
+        />
 
         <Route 
           path = "/task/view/:id" 
-          element = {user._id ? <ViewTask /> : < Login />} />
+          element = {user._id ? <ViewTask /> : < Login />} 
+        />
 
         <Route 
           path = "/task/update/:id" 
-          element = {user._id ? <UpdateTask /> : < Login />} />
+          element = {user._id ? <UpdateTask /> : < Login />} 
+        />
+
+        <Route 
+          path = "*" 
+          element = {user._id ? <Home /> : < Login />} 
+        />
       </Routes>
     </div>
   );
