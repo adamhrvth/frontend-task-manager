@@ -33,14 +33,14 @@ const Register = () => {
 
     const res = await register(data);
 
+    setLoading(false);
+
     if (res.status === 201) {
-      setLoading(false);
       alert("Registration successful.");
       setUser(res.data.user);
       navigate("/");
     }
     else {
-      setLoading(false);
       alert(res.response.data.message);
     }
   }

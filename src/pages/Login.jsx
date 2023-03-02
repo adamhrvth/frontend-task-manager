@@ -23,14 +23,14 @@ const Login = () => {
     setLoading(true);
 
     const res = await login(data);
+    
+    setLoading(false);
 
     if (res.status === 200) {
-      setLoading(false);
       setUser(res.data.user);
       navigate("/");
     }
     else {
-      setLoading(false);
       alert(res.response.data.message);
     }
 
