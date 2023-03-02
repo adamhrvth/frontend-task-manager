@@ -71,7 +71,7 @@ const Login = () => {
             ? 
               <svg 
                 aria-hidden="true" 
-                class="inline w-5 h-5 mx-auto text-gray-200 animate-spin dark:text-gray-600 fill-green-600" 
+                class="inline w-5 h-5 m-auto text-gray-200 animate-spin dark:text-gray-600 fill-green-600" 
                 viewBox="0 0 100 101" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
