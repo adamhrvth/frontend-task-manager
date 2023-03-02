@@ -92,15 +92,15 @@ const Register = () => {
         </div>
         <button 
           type = "submit"
-          className = "bg-black text-white w-full py-2 hover:bg-neutral-700"
+          className = "flex justify-center items-center bg-black text-white w-full h-10 hover:bg-neutral-700"
         >
           {
             loading 
             ? 
               <svg 
                 aria-hidden="true" 
-                class="inline w-5 h-5 m-auto text-gray-200 animate-spin dark:text-gray-600 fill-green-600" 
-                viewBox="0 0 100 101" 
+                class="w-5 h-5 text-gray-200 animate-spin dark:text-gray-600 fill-green-600" 
+                viewBox="0 0 100 100" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
               >
