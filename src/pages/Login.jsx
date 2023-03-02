@@ -39,7 +39,7 @@ const Login = () => {
   return (
     <div className = "w-4/5 sm:w-3/5 lg:w-2/5 xl:w-1/4 m-auto text-center">
       <h1 className = "text-3xl mt-6 mb-12 font-bold">
-        Login
+        Log in
       </h1>
       <form onSubmit = { handleSubmit }>
         <div className="mb-3">
